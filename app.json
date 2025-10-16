@@ -1,75 +1,80 @@
 {
-  "expo": {
-    "name": "Esc POS",
-    "slug": "esc-pos",
-    "version": "1.0.0",
-    "scheme": "esc-pos",
-    "newArchEnabled": true,
-    "orientation": "portrait",
-    "userInterfaceStyle": "automatic",
-    "icon": "./assets/icon.png",
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true,
-      "requireFullScreen": true,
-      "entitlements": {
-        "com.apple.developer.networking.wifi-info": true,
-        "com.apple.external-accessory.wireless-configuration": true,
-        "aps-environment": "production"
-      },
-      "infoPlist": {
-        "UIRequiresFullScreen": true,
-        "NSDocumentsUsageDescription": "This app requires access to the file system to store and retrieve data.",
-        "NSFileProtectionComplete": "This setting ensures that files are protected.",
-        "NSLocationAlwaysUsageDescription": "This app requires access to your location to find nearby Bluetooth devices.",
-        "NSLocationWhenInUseUsageDescription": "This app requires access to your location to find nearby Bluetooth devices.",
-        "NSLocalNetworkUsageDescription": "This app requires access to the local network to connect to devices on the same network.",
-        "NSBonjourServices": [
-          "_bonjour._tcp",
-          "_lnp._tcp."
+    "expo": {
+        "name": "Esc POS",
+        "slug": "esc-pos",
+        "version": "1.0.0",
+        "scheme": "esc-pos",
+        "newArchEnabled": true,
+        "orientation": "portrait",
+        "userInterfaceStyle": "automatic",
+        "icon": "./assets/icon.png",
+        "assetBundlePatterns": ["**/*"],
+        "ios": {
+            "supportsTablet": true,
+            "requireFullScreen": true,
+            "entitlements": {
+                "com.apple.developer.networking.wifi-info": true,
+                "com.apple.external-accessory.wireless-configuration": true,
+                "aps-environment": "production"
+            },
+            "infoPlist": {
+                "UIRequiresFullScreen": true,
+                "NSDocumentsUsageDescription": "This app requires access to the file system to store and retrieve data.",
+                "NSFileProtectionComplete": "This setting ensures that files are protected.",
+                "NSLocationAlwaysUsageDescription": "This app requires access to your location to find nearby Bluetooth devices.",
+                "NSLocationWhenInUseUsageDescription": "This app requires access to your location to find nearby Bluetooth devices.",
+                "NSLocalNetworkUsageDescription": "This app requires access to the local network to connect to devices on the same network.",
+                "NSBluetoothAlwaysUsageDescription": "Use this to communicate with the printer.",
+                "UISupportedExternalAccessoryProtocols": ["com.epson.escpos"],
+                "NSBonjourServices": ["_bonjour._tcp", "_lnp._tcp."],
+                "UIBackgroundModes": ["fetch", "remote-notification"],
+                "NSAppTransportSecurity": {
+                    "NSAllowsArbitraryLoads": true
+                }
+            },
+            "config": {
+                "usesNonExemptEncryption": false
+            },
+            "bundleIdentifier": "com.aargon.escpos"
+        },
+        "android": {
+            "adaptiveIcon": {
+                "foregroundImage": "./assets/icon.png",
+                "backgroundColor": "#000000"
+            },
+            "permissions": [
+                "android.permission.INTERNET",
+                "android.permission.BLUETOOTH_SCAN",
+                "android.permission.BLUETOOTH_CONNECT",
+                "android.permission.BLUETOOTH",
+                "android.permission.BLUETOOTH_ADMIN",
+                "android.permission.ACCESS_FINE_LOCATION",
+                "android.permission.ACCESS_COARSE_LOCATION",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.READ_EXTERNAL_STORAGE"
+            ],
+            "package": "com.aargon.escpos"
+        },
+        "web": {
+            "bundler": "metro",
+            "favicon": "./assets/icon.png"
+        },
+        "plugins": [
+            "expo-font",
+            [
+                "expo-splash-screen",
+                {
+                    "image": "./assets/splash.png",
+                    "imageWidth": 100,
+                    "resizeMode": "contain",
+                    "backgroundColor": "#090909"
+                }
+            ]
         ],
-        "UIBackgroundModes": [
-          "fetch",
-          "remote-notification"
-        ],
-        "NSAppTransportSecurity": {
-          "NSAllowsArbitraryLoads": true
+        "extra": {
+            "eas": {
+                "projectId": "085a3d63-e2ea-4ebe-b0ba-78c0a0a4e0a7"
+            }
         }
-      },
-      "config": {
-        "usesNonExemptEncryption": false
-      },
-      "bundleIdentifier": "com.aargon.escpos"
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#000000"
-      },
-      "package": "com.aargon.escpos"
-    },
-    "web": {
-      "bundler": "metro",
-      "favicon": "./assets/icon.png"
-    },
-    "plugins": [
-      "expo-font",
-      [
-        "expo-splash-screen",
-        {
-          "image": "./assets/splash.png",
-          "imageWidth": 100,
-          "resizeMode": "contain",
-          "backgroundColor": "#090909"
-        }
-      ]
-    ],
-    "extra": {
-      "eas": {
-        "projectId": "085a3d63-e2ea-4ebe-b0ba-78c0a0a4e0a7"
-      }
     }
-  }
 }
