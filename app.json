@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "esc-pos-printer-expo",
-    "slug": "esc-pos-printer-expo",
+    "name": "Esc POS",
+    "slug": "esc-pos",
     "version": "1.0.0",
-    "scheme": "my-app",
+    "scheme": "esc-pos",
     "newArchEnabled": true,
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
@@ -28,13 +28,9 @@
         "NSLocalNetworkUsageDescription": "This app requires access to the local network to connect to devices on the same network.",
         "NSBonjourServices": [
           "_bonjour._tcp",
-          "_lnp._tcp.",
-          "_bonjour._tcp",
           "_lnp._tcp."
         ],
         "UIBackgroundModes": [
-          "fetch",
-          "remote-notification",
           "fetch",
           "remote-notification"
         ],
@@ -45,14 +41,14 @@
       "config": {
         "usesNonExemptEncryption": false
       },
-      "bundleIdentifier": "com.saqoora.escposprinterexpo"
+      "bundleIdentifier": "com.aargon.escpos"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#000000"
       },
-      "package": "com.saqoora.escposprinterexpo"
+      "package": "com.aargon.escpos"
     },
     "web": {
       "bundler": "metro",
@@ -72,7 +68,7 @@
     ],
     "extra": {
       "eas": {
-        "projectId": ""
+        "projectId": "085a3d63-e2ea-4ebe-b0ba-78c0a0a4e0a7"
       }
     }
   }
