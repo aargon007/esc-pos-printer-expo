@@ -2,8 +2,6 @@
 
 # dependencies
 node_modules/
-package-lock.json
-pnpm-lock.yaml
 
 # Expo
 .expo/
@@ -42,6 +40,5 @@ yarn-error.*
 *.tsbuildinfo
 
 # lock file
-yarn.lock
 package-lock.json
 pnpm-lock.yml
